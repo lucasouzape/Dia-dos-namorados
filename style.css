@@ -93,8 +93,8 @@ legend {
     text-align: left;
 }
 
-/* Efeito Hover nas opções válidas */
-.opcao-item:hover:not(.bloqueado) {
+/* Efeito Hover nas opções */
+.opcao-item:hover {
     border-color: #e84393;
     background: #fff9fa;
     transform: scale(1.03);
@@ -116,21 +116,6 @@ label {
     font-weight: 600;
     cursor: pointer;
     width: 100%;
-}
-
-/* DESIGN PARA AS OPÇÕES BLOQUEADAS ("Não" e "De jeito nenhum") */
-.opcao-item.bloqueado {
-    background: #dfe6e9;
-    border-color: #b2bec3;
-    opacity: 0.55;
-    cursor: not-allowed;
-}
-
-.opcao-item.bloqueado input,
-.opcao-item.bloqueado label {
-    cursor: not-allowed;
-    color: #636e72;
-    text-decoration: line-through; /* Dá o efeito visual de cortado */
 }
 
 /* Área dos botões */
