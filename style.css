@@ -1,0 +1,176 @@
+/* Reset de margens e fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Fundo da tela ultra chamativo e romântico */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Corações flutuantes decorativos no fundo */
+body::before, body::after {
+    content: "❤️";
+    position: absolute;
+    font-size: 5rem;
+    opacity: 0.2;
+    animation: flutuar 6s ease-in-out infinite;
+}
+body::before { top: 10%; left: 10%; animation-delay: 0s; }
+body::after { bottom: 10%; right: 10%; animation-delay: 3s; }
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.1); }
+}
+
+/* Container do Formulário (Efeito de cartão flutuante) */
+.form-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    padding: 40px 30px;
+    box-shadow: 0 15px 35px rgba(214, 48, 49, 0.3);
+    max-width: 440px;
+    width: 100%;
+    text-align: center;
+    border: 4px solid #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.form-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Título principal */
+h1 {
+    color: #d63031;
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização do Fieldset */
+fieldset {
+    border: 3px dashed #ff7675;
+    border-radius: 15px;
+    padding: 25px 20px;
+    margin-bottom: 30px;
+    background: #fff0f3;
+}
+
+/* Legenda do Fieldset */
+legend {
+    color: #e84393;
+    font-weight: bold;
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 2px solid #ff7675;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Linhas de opções (divs agrupadoras) */
+.opcao-item {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    margin: 14px 0;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 2px solid #fab1a0;
+    transition: all 0.2s ease-in-out;
+    text-align: left;
+}
+
+/* Efeito Hover nas opções válidas */
+.opcao-item:hover:not(.bloqueado) {
+    border-color: #e84393;
+    background: #fff9fa;
+    transform: scale(1.03);
+}
+
+/* Customização sutil do quadradinho do checkbox */
+input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    accent-color: #d63031;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+/* Estilo do texto das labels */
+label {
+    font-size: 1.2rem;
+    color: #2d3436;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* DESIGN PARA AS OPÇÕES BLOQUEADAS ("Não" e "De jeito nenhum") */
+.opcao-item.bloqueado {
+    background: #dfe6e9;
+    border-color: #b2bec3;
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.opcao-item.bloqueado input,
+.opcao-item.bloqueado label {
+    cursor: not-allowed;
+    color: #636e72;
+    text-decoration: line-through; /* Dá o efeito visual de cortado */
+}
+
+/* Área dos botões */
+.botoes-container {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+/* Estilo base dos botões */
+input[type="submit"], input[type="reset"] {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+/* Botão Enviar (Principal) */
+.btn-enviar {
+    background: linear-gradient(135deg, #ff007f 0%, #ff4b2b 100%);
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 75, 43, 0.4);
+}
+
+.btn-enviar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 75, 43, 0.6);
+}
+
+/* Botão Limpar */
+.btn-limpar {
+    background: #ffe0e6;
+    color: #e84393;
+}
+
+.btn-limpar:hover {
+    background: #fecdd6;
+    color: #d63031;
+}
